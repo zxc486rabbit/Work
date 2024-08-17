@@ -3,10 +3,11 @@
   margin: 0;
 }
 header {
-  background-color: rgba(35, 28, 26, 0.8);
+  background-color: rgba(7, 180, 62);
   height: 80px;
   width: 100%;
   position: fixed;
+  z-index: 99999;
 }
 h1 {
   color: white;
@@ -51,10 +52,6 @@ header a:hover {
   justify-content: center;
   text-align: center;
   padding: 0 20px;
-}
-.news1 {
-  background-color: #485652;
-  height: 5vh;
 }
 .news h2 {
   font-size: 60px;
