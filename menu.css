@@ -39,6 +39,9 @@ li:hover{
 li:active{
     color: rgb(7, 180, 62);
 }
+.active{
+    color: rgb(7, 180, 62);
+}
 .title{
     color: rgb(7, 180, 62);
     font-weight: bold; /* 使字體加粗 */
@@ -68,5 +71,33 @@ li:active{
     /* width: 100%; */
     z-index: 1000;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: white; /* 確保背景顏色與主體分開 */
   }
-  
+.cardImage{
+    height: 210px;
+    overflow: hidden;
+}
+.cardImage img {
+    height: 100%;
+    width: 100%; 
+    object-fit: cover; 
+    object-position: center; 
+}
+
+/* 調整幻燈片箭頭 */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 4rem; /* 調整箭頭的寬度 */
+    height: 4rem; /* 調整箭頭的高度 */
+    background-color: rgba(0, 0, 0, 0.5); /* 添加背景色，使其更顯眼 */
+    border-radius: 50%; /* 將背景變成圓形 */
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L6.707 7.5l4.647 4.646a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 1 1-.708-.708L9.293 8 4.646 3.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+/*  */

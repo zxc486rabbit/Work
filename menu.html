@@ -1,270 +1,730 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="menu.css">
-    <title>菜單</title>
-  </head>
-  <body>
-    <header id="header">
-        <button class="menu">&#9776;</button>
-        <h1>小猴子</h1>
-        <nav>
-        <ul>
-            <li><a href="index.html">最新消息</a></li>
-            <li><a href="#">關於我們</a></li>
-            <li><a href="#">門市據點</a></li>
-            <li><a href="#">會員專區</a></li>                
-        </ul>
-        </nav>  
-        </header>   
 
-      <div class="container container1">
-        <div class="row">
-          <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="0"
-                class="active"
-                aria-current="true"
-                aria-label="Slide 1"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-              ></button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="menu.css">
+  <title>菜單</title>
+</head>
+
+<body>
+  <header>
+    <button class="menu">&#9776;</button>
+    <div class="logo">
+        <img src="images/確定LOGO猴.png" alt="LOGO">
+        <h1>小猴子複合式餐廳</h1>
+    </div>
+    <nav>
+        <ul>
+        <li><a href="index.html">最新消息</a></li>
+        <li><a href="#">關於我們</a></li>
+        <li><a href="#">門市據點</a></li>
+        <li><a href="#">會員專區</a></li>                
+    </ul>
+    </nav>  
+    </header>   
+
+  <div class="container container1">
+    <div class="row">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/輪播1.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/小猴子背景.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/輪播3.jpg" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- 列表 -->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <section>
+            <ul class="list sticky-top" id="stickyList">
+              <li class="active"><a>義大利麵</a></li>
+              <li><a>火鍋</a></li>
+              <li><a>炸物</a></li>
+              <li><a>飲料</a></li>
+              <li><a>鬆餅</a></li>
+              <li><a>素食專區</a></li>
+              <li><a>商業午餐</a></li>
+            </ul>
+        </div>
+      </div>
+      </section>
+
+      <div class="row mt-2 mb-3">
+        <h3 class="ms-2 title">義大利麵</h3>
+      </div>
+      <!-- 卡片 -->
+      <div class="row">
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <img src="images/奶油白醬.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">奶油白醬</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
             </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="images/輪播1.jpg" class="d-block w-100" alt="..." />
-              </div>
-              <div class="carousel-item">
-                <img src="images/小猴子背景.jpg" class="d-block w-100" alt="..." />
-              </div>
-              <div class="carousel-item">
-                <img src="images/輪播3.jpg" class="d-block w-100" alt="..." />
-              </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <img src="images/泰式酸辣.jpg" class="card-img-top" alt="泰式酸辣">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">泰式酸辣</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
             </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <img src="images/奶油金沙.jpg" class="card-img-top" alt="奶油金沙">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">奶油金沙</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <img src="images/金黃咖哩.jpg" class="card-img-top" alt="金黃咖哩">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">金黃咖哩</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <main>
-        <!-- 列表 -->
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                        <section>
-                        <ul class="list sticky-top" id="stickyList">
-                            <li>義大利麵</li>
-                            <li>火鍋</li>
-                            <li>炸物</li>
-                            <li>飲料</li>
-                            <li>鬆餅</li>
-                            <li>素食專區</li>
-                            <li>商業午餐</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            
-            <div class="row mt-2 mb-3">
-                <h3 class="title">義大利麵</h3>
+      <div class="row py-5">
+        <div class="col-3">
+          <div class="card m-auto" style="width: 18rem;">
+            <img src="images/單純青醬.jpg" class="card-img-top" alt="單純青醬">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">單純青醬</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
             </div>
-            <!-- 卡片 -->
-             <div class="row">
-                <div class="col">
-                    <div class="card m-auto" style="width: 18rem;">
-                        <img src="images/奶油白醬.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">奶油白醬</h5>
-                            <p class="card-text">Make up the bulk of the card's content.</p>
-                            <a href="#" class="btn addCart">加入購物車</a>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col">
-                        <div class="card m-auto" style="width: 18rem;">
-                            <img src="images/泰式酸辣.jpg" class="card-img-top" alt="泰式酸辣">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold">泰式酸辣</h5>
-                                <p class="card-text">Make up the bulk of the card's content.</p>
-                                <a href="#" class="btn addCart">加入購物車</a>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="col">
-                            <div class="card m-auto" style="width: 18rem;">
-                                <img src="images/奶油金沙.jpg" class="card-img-top" alt="奶油金沙">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">奶油金沙</h5>
-                                    <p class="card-text">Make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn addCart">加入購物車</a>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="col">
-                                <div class="card m-auto" style="width: 18rem;">
-                                    <img src="images/金黃咖哩.jpg" class="card-img-top" alt="金黃咖哩">
-                                    <div class="card-body">
-                                        <h5 class="card-title fw-bold">金黃咖哩</h5>
-                                        <p class="card-text">Make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn addCart">加入購物車</a>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card m-auto" style="width: 18rem;">
+            <img src="images/奶油金沙.jpg" class="card-img-top" alt="奶油金沙">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">奶油金沙</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                            <div class="row py-5">
-                                <div class="col">
-                                    <div class="card m-auto" style="width: 18rem;">
-                                        <img src="images/單純青醬.jpg" class="card-img-top" alt="單純青醬">
-                                        <div class="card-body">
-                                            <h5 class="card-title fw-bold">單純青醬</h5>
-                                            <p class="card-text">Make up the bulk of the card's content.</p>
-                                            <a href="#" class="btn addCart">加入購物車</a>
-                                        </div>
-                                    </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card m-auto" style="width: 18rem;">
-                                            <img src="images/奶油金沙.jpg" class="card-img-top" alt="奶油金沙">
-                                            <div class="card-body">
-                                                <h5 class="card-title fw-bold">奶油金沙</h5>
-                                                <p class="card-text">Make up the bulk of the card's content.</p>
-                                                <a href="#" class="btn addCart">加入購物車</a>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    <div class="col">
-                                        <div class="card m-auto" style="width: 18rem;">
-                                            <img src="images/番茄紅醬.jpg" class="card-img-top" alt="番茄紅醬">
-                                            <div class="card-body">
-                                                <h5 class="card-title fw-bold">番茄紅醬</h5>
-                                                <p class="card-text">Make up the bulk of the card's content.</p>
-                                                <a href="#" class="btn addCart">加入購物車</a>
-                                            </div>
-                                        </div>
-                                        </div>
-                                            <div class="col">
-                                                <div class="card m-auto" style="width: 18rem;">
-                                                    <img src="images/金黃咖哩.jpg" class="card-img-top" alt="金黃咖哩">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title fw-bold">金黃咖哩</h5>
-                                                        <p class="card-text">Make up the bulk of the card's content.</p>
-                                                        <a href="#" class="btn addCart">加入購物車</a>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
+      <!-- 火鍋 -->
+      <div class="row">
+        <h3 class="ms-2 title">火鍋</h3>
+      </div>
+      <div class="row pt-3 pb-5">
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/火鍋1.jpg" class="card-img-top" alt="香茅檸檬鍋">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">香茅檸檬鍋</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/火鍋1.jpg" class="card-img-top" alt="川味麻辣鍋">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">川味麻辣鍋</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/火鍋1.jpg" class="card-img-top" alt="泡菜部隊鍋">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">泡菜部隊鍋</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/火鍋1.jpg" class="card-img-top" alt="時蔬什錦鍋">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">時蔬什錦鍋</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pt-3 pb-5">
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/火鍋1.jpg" class="card-img-top" alt="日式豚骨鍋">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">日式豚骨鍋</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/火鍋1.jpg" class="card-img-top" alt="日式昆布鍋">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">日式昆布鍋</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/火鍋1.jpg" class="card-img-top" alt="南洋肉骨茶鍋">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">南洋肉骨茶鍋</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/火鍋1.jpg" class="card-img-top" alt="火鍋">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">東北酸白菜鍋</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                                            <!--  -->
-                                            <div class="row py-5">
-                                                <div class="col">
-                                                    <div class="card m-auto" style="width: 18rem;">
-                                                        <img src="images/單純青醬.jpg" class="card-img-top" alt="單純青醬">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title fw-bold">單純青醬</h5>
-                                                            <p class="card-text">Make up the bulk of the card's content.</p>
-                                                            <a href="#" class="btn addCart">加入購物車</a>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div class="card m-auto" style="width: 18rem;">
-                                                            <img src="images/奶油金沙.jpg" class="card-img-top" alt="奶油金沙">
-                                                            <div class="card-body">
-                                                                <h5 class="card-title fw-bold">奶油金沙</h5>
-                                                                <p class="card-text">Make up the bulk of the card's content.</p>
-                                                                <a href="#" class="btn addCart">加入購物車</a>
-                                                            </div>
-                                                        </div>
-                                                        </div>
-                                                    <div class="col">
-                                                        <div class="card m-auto" style="width: 18rem;">
-                                                            <img src="images/番茄紅醬.jpg" class="card-img-top" alt="番茄紅醬">
-                                                            <div class="card-body">
-                                                                <h5 class="card-title fw-bold">番茄紅醬</h5>
-                                                                <p class="card-text">Make up the bulk of the card's content.</p>
-                                                                <a href="#" class="btn addCart">加入購物車</a>
-                                                            </div>
-                                                        </div>
-                                                        </div>
-                                                            <div class="col">
-                                                                <div class="card m-auto" style="width: 18rem;">
-                                                                    <img src="images/金黃咖哩.jpg" class="card-img-top" alt="金黃咖哩">
-                                                                    <div class="card-body">
-                                                                        <h5 class="card-title fw-bold">金黃咖哩</h5>
-                                                                        <p class="card-text">Make up the bulk of the card's content.</p>
-                                                                        <a href="#" class="btn addCart">加入購物車</a>
-                                                                    </div>
-                                                                </div>
-                                                                </div>
-                                                            </div>
-                                            <!--  -->
-                        </div>
-                    </main>
+      <div class="row pt-3 pb-5">
+        <div class="col-3">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/火鍋1.jpg" class="card-img-top" alt="花雕雞湯鍋">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">花雕雞湯鍋</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/火鍋1.jpg" class="card-img-top" alt="法式牛奶鍋">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">法式牛奶鍋</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/火鍋1.jpg" class="card-img-top" alt="南瓜牛奶鍋">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">南瓜牛奶鍋</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+      <!-- 炸物 -->
+      <div class="row">
+        <h3 class="ms-2 title">炸物</h3>
+      </div>
+      <div class="row pt-3 pb-5">
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/炸物拼盤.jpg" class="card-img-top" alt="炸物拼盤">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">炸物拼盤</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/可口小雞球.jpg" class="card-img-top" alt="可口小雞球">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">可口小雞球</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/美式雞塊.jpg" class="card-img-top" alt="美式雞塊">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">美式雞塊</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/椒鹽杏鮑菇.jpg" class="card-img-top" alt="椒鹽杏鮑菇">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">椒鹽杏鮑菇</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pt-3 pb-5">
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/辣味雞米花.jpg" class="card-img-top" alt="辣味雞米花">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">辣味雞米花</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/鮮蝦可樂餅.jpg" class="card-img-top" alt="鮮蝦可樂餅">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">鮮蝦可樂餅</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/檸檬雞柳條.jpg" class="card-img-top" alt="檸檬雞柳條">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">檸檬雞柳條</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/蠶寶寶薯條.jpg" class="card-img-top" alt="蠶寶寶薯條">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">蠶寶寶薯條</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
 
-    <script>
-      const stickyList = document.getElementById('stickyList');
-const header = document.getElementById('header');
-const stickyOffset = stickyList.offsetTop;
+      <!-- 飲料 -->
+      <div class="row">
+        <h3 class="ms-2 title">飲料</h3>
+      </div>
+      <div class="row pt-3 pb-5">
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/小葉紅茶.jpg" class="card-img-top" alt="小葉紅茶">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">小葉紅茶</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/茉香綠茶.jpg" class="card-img-top" alt="茉香綠茶">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">茉香綠茶</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/玫瑰洛神梅.jpg" class="card-img-top" alt="玫瑰洛神梅">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">玫瑰洛神梅</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/健康蔓越莓.jpg" class="card-img-top" alt="健康蔓越莓">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">健康蔓越莓</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pt-3 pb-5">
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/韓柚綠茶.jpg" class="card-img-top" alt="韓柚綠茶">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">韓柚綠茶</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/布丁奶茶.jpg" class="card-img-top" alt="布丁奶茶">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">布丁奶茶</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/波霸奶茶.jpg" class="card-img-top" alt="波霸奶茶">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">波霸奶茶</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/蜜桃紅茶.jpg" class="card-img-top" alt="蜜桃紅茶">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">蜜桃紅茶</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pt-3 pb-5">
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/柳橙綠茶.jpg" class="card-img-top" alt="柳橙綠茶">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">柳橙綠茶</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/香醇奶茶.jpg" class="card-img-top" alt="香醇奶茶">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">香醇奶茶</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/香醇奶綠.jpg" class="card-img-top" alt="香醇奶綠">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">香醇奶綠</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/榛果奶茶.jpg" class="card-img-top" alt="榛果奶茶">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">榛果奶茶</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pt-3 pb-5">
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/薄荷奶茶.jpg" class="card-img-top" alt="薄荷奶茶">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">薄荷奶茶</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/鮮奶茶.jpg" class="card-img-top" alt="鮮奶茶">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">鮮奶茶</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/小泡泡氣泡飲(葡萄).jpg" class="card-img-top" alt="小泡泡氣泡飲(葡萄)">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">小泡泡氣泡飲(葡萄)</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="cardImage">
+              <img src="images/小泡泡氣泡飲(水蜜桃).jpg" class="card-img-top" alt="小泡泡氣泡飲(水蜜桃)">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">小泡泡氣泡飲(水蜜桃)</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
 
-window.addEventListener('scroll', () => {
-        if (window.pageYOffset >= stickyOffset - header.offsetHeight) {
-          stickyList.classList.add('sticky');
-        } else {
-          stickyList.classList.remove('sticky');
-        }
-      });
-      </script>
-  </body>
+      <!-- 鬆餅 -->
+      <div class="row mt-2 mb-3">
+        <h3 class="ms-2 title">鬆餅</h3>
+      </div>
+      <!-- 卡片 -->
+      <div class="row">
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <img src="images/甜蜜蜂蜜鬆餅.jpg" class="card-img-top" alt="甜蜜蜂蜜鬆餅">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">甜蜜蜂蜜鬆餅</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <img src="images/甜蜜蜂蜜鬆餅.jpg" class="card-img-top" alt="濃情巧克力鬆餅">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">濃情巧克力鬆餅</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <img src="images/甜蜜蜂蜜鬆餅.jpg" class="card-img-top" alt="香濃奶酥鬆餅">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">香濃奶酥鬆餅</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <img src="images/甜蜜蜂蜜鬆餅.jpg" class="card-img-top" alt="台灣花生鬆餅">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">台灣花生鬆餅</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row py-5">
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <img src="images/甜蜜蜂蜜鬆餅.jpg" class="card-img-top" alt="冰淇淋鬆餅">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">冰淇淋鬆餅</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <img src="images/甜蜜蜂蜜鬆餅.jpg" class="card-img-top" alt="牛牛布丁黑鬆餅">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">牛牛布丁黑鬆餅</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <img src="images/甜蜜蜂蜜鬆餅.jpg" class="card-img-top" alt="OREO煉乳冰淇淋鬆餅">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">OREO煉乳冰淇淋鬆餅</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card m-auto" style="width: 18rem;">
+            <img src="images/甜蜜蜂蜜鬆餅.jpg" class="card-img-top" alt="芒果煉乳冰淇淋鬆餅">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">芒果煉乳冰淇淋鬆餅</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-3">
+          <div class="card m-auto" style="width: 18rem;">
+            <img src="images/甜蜜蜂蜜鬆餅.jpg" class="card-img-top" alt="冰淇淋鬆餅">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">冰淇淋鬆餅</h5>
+              <p class="card-text">Make up the bulk of the card's content.</p>
+              <a href="#" class="btn addCart">加入購物車</a>
+            </div>
+          </div>
+        </div>
+      </div>
+       <!--  -->
+    </div>
+  </main>
+  <footer>
+    <p>Copyright © 2023 烘培工坊 All Rights Reserved.</p>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="menu.js"></script>
+</body>
+
 </html>

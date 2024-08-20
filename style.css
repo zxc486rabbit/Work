@@ -8,24 +8,49 @@ header {
   width: 100%;
   position: fixed;
   z-index: 99999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 h1 {
   color: white;
   position: absolute;
-  left: 120px;
+  left: 80px;
   top: 0;
   line-height: 80px;
-  background-image: url(images/logo.svg);
+  font-weight: bold;
+  /* background-image: url(images/確定LOGO猴.jpg); */
   background-repeat: no-repeat;
   background-position: center;
-  width: 210px;
-  text-indent: -9999px;
+  width: 1000px;
+  /* text-indent: -9999px; */
+}
+.logo{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 250px;
+  top: 0;
+  height: 80px;
+  /* background-image: url(images/確定LOGO猴.jpg); */
+}
+.logo img {
+  height: 60px;
+  margin-right: 20px;
+}
+.logo h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+
 }
 header ul {
   position: absolute;
   right: 5vw;
   top: 0;
   line-height: 80px;
+  padding: 0;
+  margin: 0;
 }
 header li {
   display: inline;
@@ -34,9 +59,13 @@ header li {
 header a {
   color: white;
   text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 header a:hover {
-  text-decoration: underline;
+  color: #ecf0f1;
+  /* text-decoration: underline; */
 }
 .news {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
