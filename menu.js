@@ -207,14 +207,21 @@ document.addEventListener("DOMContentLoaded", function () {
           cancelButtonText: "取消",
           scrollbarPadding: false, // 保持滾動條可見，防止隱藏滾動條  
           customClass: {
-            popup: "custom-swal-popup", // 自定義樣式類
+            popup: 'custom-swal-popup', // 自定義樣式類
           },
-          
+          // 當 SweetAlert 打開時隱藏側邊欄
+  didOpen: () => {
+    document.getElementById('cart-sidebar').style.display = 'none';
+  },
+  // 當 SweetAlert 關閉時顯示側邊欄
+  didClose: () => {
+    document.getElementById('cart-sidebar').style.display = 'block';
+  }
         })
           .then((result) => {
             if (result.isConfirmed) {
                // 關閉側邊欄或做其他操作
-               cartSidebar.classList.remove('show');
+               
               deleteCartItem(index); // 如果用戶確認，則刪除項目
               // 更新購物車數量
               cartCount -= 1;
