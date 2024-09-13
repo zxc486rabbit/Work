@@ -213,6 +213,8 @@ document.addEventListener("DOMContentLoaded", function () {
         })
           .then((result) => {
             if (result.isConfirmed) {
+               // 關閉側邊欄或做其他操作
+               cartSidebar.classList.remove('show');
               deleteCartItem(index); // 如果用戶確認，則刪除項目
               // 更新購物車數量
               cartCount -= 1;
