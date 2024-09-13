@@ -410,5 +410,5 @@ li:active{
 /* SweetAlert2 */
   .custom-swal-popup {
     z-index: 9999999 !important; /* 確保其 z-index 高於其他元素 */
-    position: relative; /* 确保该元素的 z-index 生效 */
+    /* position: relative; 确保该元素的 z-index 生效 */
   }
