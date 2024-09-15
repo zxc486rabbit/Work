@@ -16,17 +16,17 @@
         </div>
       </a>
     <header>
-      <button class="menu">&#9776;</button>
+      <button class="menu" id="menuButton">&#9776;</button>
       <a href="#" class="logo">
         <img src="images/確定LOGO猴.png" alt="LOGO" />
         <h1>小猴子複合式餐廳</h1>
       </a>
-      <nav>
-        <ul>
-          <li><a href="menu.html">精選菜單</a></li>
-          <li class="disabled">關於我們</li>
-        <li class="disabled">門市據點</li>
-        <li class="disabled">會員專區</li>
+      <nav id="navMenu">
+        <ul class="headerUl">
+          <li><a href="index.html">主頁</a></li>
+        <li><a href="menu.html">精選菜單</a></li>
+      <li><a>門市據點</a></li>
+      <li><a>會員專區</a></li>
         </ul>
       </nav>
     </header>
@@ -102,4 +102,36 @@
       <p>Copyright © 2024 小猴子 All Rights Reserved.</p>
     </footer>
   </body>
+
+  <script>
+   document.getElementById('menuButton').addEventListener('click', function() {
+  const headerUl = document.querySelector('.headerUl');
+  if (headerUl.style.display === 'none' || headerUl.style.display === '') {
+    headerUl.style.display = 'block';
+  } else {
+    headerUl.style.display = 'none';
+  }
+});
+
+// 當窗口尺寸改變時檢查螢幕寬度
+window.addEventListener('resize', function() {
+  const headerUl = document.querySelector('.headerUl');
+  if (window.innerWidth > 768) {
+    headerUl.style.display = ''; // 恢復預設顯示
+  }
+});
+
+// 獲取當前頁面的路徑
+const currentPage = window.location.pathname;
+
+// 獲取所有的導航連結
+const navLinks = document.querySelectorAll('.headerUl a');
+
+// 迭代每個連結，並檢查是否與當前頁面匹配
+navLinks.forEach(link => {
+  if (link.href.includes(currentPage)) {
+    link.classList.add('active');
+  }
+});
+  </script>
 </html>

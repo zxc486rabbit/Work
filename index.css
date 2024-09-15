@@ -58,11 +58,14 @@ header li {
   margin-right: 4vw;
 }
 header a {
-  color: white;
+  color: #212529;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
   transition: color 0.3s ease;
+}
+.headerUl a.active {
+  color: #ffffff; /* 改變顏色 */
 }
 header a:hover {
   color: #ecf0f1;
@@ -240,6 +243,8 @@ footer {
   display: none;
 }
 
+
+
 /* 響應式設計語法 */
 @media screen and (max-width: 1160px) {
   .logo{
@@ -252,15 +257,47 @@ footer {
     /* background-image: url(images/確定LOGO猴.jpg); */
   }
 }
+
+
 @media screen and (max-width: 768px) {
-  header ul {
+  .headerUl {
     display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(245, 245, 245, 0.95); /* 深色背景 */
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 增加陰影效果 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5) inset; /* 增加陰影效果 */
+    
+  }
+  header ul li {
+    display: block;
+    margin: 15px 0; /* 增加間距 */
+    font-size: 20px; /* 讓文字更大 */
+  }
+  header a {
+    color: #333; /* 白色文字 */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s ease, background-color 0.3s ease; /* 增加過渡效果 */
+    padding: 10px 0;
+    display: block; /* 填滿整個 li */
+  }
+
+  header a:hover {
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.5); /* 當滑鼠懸停時的背景色變化 */
+    border-radius: 5px; /* 圓角 */
   }
   .logo{
     display: flex;
     align-items: center;
     position: absolute;
-    left: 30%;
+    left: 80px;
     top: 0;
     height: 80px;
     /* background-image: url(images/確定LOGO猴.jpg); */
@@ -269,7 +306,7 @@ footer {
     font-size: 40px;
   }
   .menu {
-    display: block;
+    display: block; /* 顯示菜單按鈕 */
     background-color: transparent;
     color: white;
     font-size: 35px;
@@ -278,6 +315,8 @@ footer {
     left: 20px;
     border: none;
     cursor: pointer;
+    border-radius: 5px; /* 圓角按鈕 */
+    transition: background-color 0.3s ease; /* 增加過渡效果 */
   }
   .shop {
     flex-direction: column;
@@ -301,6 +340,17 @@ footer {
   }
 }
 
+/* 當螢幕大於768px時，還原水平排列 */
+@media screen and (min-width: 769px) {
+   .headerUl {
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 80px;
+    padding: 0;
+    margin: 0;
+  }
+}
 
 
 /* 修改 .disabled 的樣式 */
@@ -309,6 +359,7 @@ footer {
   color: #575757; /* 禁用狀態的顏色 */
   text-decoration: none; /* 移除下劃線 */
   cursor: not-allowed; /* 顯示不可點擊的鼠標指標 */
+  font-size: 18px;
 }
 
 /* 當滑鼠懸停時顯示提示文字 */

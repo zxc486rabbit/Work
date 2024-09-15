@@ -143,6 +143,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 點擊購物車圖示時顯示或隱藏側邊欄
   cartButton.addEventListener("click", () => {
+     // 檢查購物車是否為空
+  if (cartItems.length > 0) {
     // 檢查側邊欄是否已經顯示
     if (cartSidebar.classList.contains("show")) {
       // 側邊欄已顯示，將其隱藏
@@ -154,7 +156,18 @@ document.addEventListener("DOMContentLoaded", function () {
       cartSidebar.classList.add("show");
       sidebarOverlay.classList.add("show");
     }
-  });
+  }else {
+    // 當購物車為空時顯示提示
+    Swal.fire({
+      title: "您的購物車目前是空的",
+      icon: "info",
+      confirmButtonText: "確定",
+      customClass: {
+        popup: "custom-swal-popup",
+      },
+    });
+  }
+});
 
   // 點擊關閉按鈕或遮罩時隱藏側邊欄
   closeSidebarButton.addEventListener("click", () => {
@@ -211,11 +224,13 @@ document.addEventListener("DOMContentLoaded", function () {
           },
           // 當 SweetAlert 打開時隱藏側邊欄
   didOpen: () => {
-    document.getElementById('cart-sidebar').style.display = 'none';
+    cartSidebar.classList.remove("show");
+        sidebarOverlay.classList.remove("show");
   },
-  // 當 SweetAlert 關閉時顯示側邊欄
+  // // 當 SweetAlert 關閉時顯示側邊欄
   didClose: () => {
-    document.getElementById('cart-sidebar').style.display = 'block';
+    cartSidebar.classList.add("show");
+        sidebarOverlay.classList.add("show");
   }
         })
           .then((result) => {
@@ -248,9 +263,56 @@ document.addEventListener("DOMContentLoaded", function () {
         customClass: {
           popup: "custom-swal-popup", // 使用自定義樣式類
         },
+      }).then(() => {
+        // 在確認購物車清空後，移除側欄的顯示狀態並重置
+        cartSidebar.classList.remove("show");
+        sidebarOverlay.classList.remove("show");
+        
+        // 確保購物車圖示恢復正常狀態
+        cartButton.classList.remove("bounce");
+        
       });
-      cartSidebar.classList.remove("show");
-      sidebarOverlay.classList.remove("show");
     }
   }
+
+
+  //  RWD nav列表
+   document.getElementById('menuButton').addEventListener('click', function() {
+  const headerUl = document.querySelector('.headerUl');
+  if (headerUl.style.display === 'none' || headerUl.style.display === '') {
+    headerUl.style.display = 'block';
+  } else {
+    headerUl.style.display = 'none';
+  }
+});
+
+// 當窗口尺寸改變時檢查螢幕寬度
+window.addEventListener('resize', function() {
+  const headerUl = document.querySelector('.headerUl');
+  if (window.innerWidth > 768) {
+    headerUl.style.display = ''; // 恢復預設顯示
+  }
+});
+  
+
+// 獲取當前頁面的路徑
+const currentPage = window.location.pathname;
+
+// 獲取所有的導航連結
+const navLinks = document.querySelectorAll('.headerUl a');
+
+// 迭代每個連結，並檢查是否與當前頁面匹配
+navLinks.forEach(link => {
+  if (link.href.includes(currentPage)) {
+    link.classList.add('active');
+  }
+});
+
+document.querySelector('.top').addEventListener('click', function(e) {
+  e.preventDefault();
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+  });
+});
 });
