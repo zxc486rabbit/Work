@@ -46,10 +46,10 @@ body.modal-open {
 li{
     cursor: pointer;
 }
-li:hover{
+.list li:hover{
     color: rgb(7, 180, 62);
 }
-li:active{
+.list li:active{
     color: rgb(7, 180, 62);
 }
 .active{

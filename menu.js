@@ -306,6 +306,13 @@ navLinks.forEach(link => {
   if (link.href.includes(currentPage)) {
     link.classList.add('active');
   }
+
+  // 在小於768px的螢幕上，當鼠標懸停在active的連結上時，移除active
+  link.addEventListener('mouseover', () => {
+    if (window.innerWidth < 768) {
+      link.classList.remove('active');
+    }
+  });
 });
 
 document.querySelector('.top').addEventListener('click', function(e) {

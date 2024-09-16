@@ -63,6 +63,7 @@ header a {
   font-size: 18px;
   font-weight: 500;
   transition: color 0.3s ease;
+  
 }
 .headerUl a.active {
   color: #ffffff; /* 改變顏色 */
@@ -273,6 +274,9 @@ footer {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5) inset; /* 增加陰影效果 */
     
   }
+  .headerUl a.active {
+    color: #333; /* 改變顏色 */
+  }
   header ul li {
     display: block;
     margin: 15px 0; /* 增加間距 */
@@ -289,10 +293,12 @@ footer {
   }
 
   header a:hover {
-    color: #000;
+    color: #ffffff; /* 文字顏色變為白色 */
     background-color: rgba(0, 0, 0, 0.5); /* 當滑鼠懸停時的背景色變化 */
     border-radius: 5px; /* 圓角 */
   }
+  
+  
   .logo{
     display: flex;
     align-items: center;
